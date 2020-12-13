@@ -1,6 +1,9 @@
 <template>
-  <div class="container text-left">
-    <h1 class="text-center mb-5">Creación y edición de usuarios</h1>
+  <div class="container text-left mt-5 pt-4">
+
+      
+      <h2 class="text-center">Creación de Usuario</h2>
+    
     <b-form v-if="show" class="mb-5" @submit.prevent="agregar">
        <b-form-group id="input-group-1" label="Nombre" label-for="input-1">
         <b-form-input
@@ -35,7 +38,6 @@
       </b-form-group>
 
       <b-button type="submit" variant="success" class="mr-2">Agregar</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
       
   </div>

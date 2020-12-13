@@ -1,56 +1,39 @@
 <template>
-    <div class="container mb-5">
-        <h1 class="mb-5">Lista de usuarios</h1>
+    <div class="container">
+        <h2 class="mb-5">Listado de usuarios</h2>
 
         <el-table
             :data="dataUsers"
-            style="width: 100%">
-            <el-table-column
-                label="ID"
-                width="250">
-                <template slot-scope="scope">
-                    <i class="el-icon-s-custom"></i>
-                    <span style="margin-left: 10px">{{ scope.row.id }}</span>
-                </template>
-            </el-table-column>
+            style="width: 70%">
             <el-table-column
                 label="Nombre"
                 width="180">
                 <template slot-scope="scope">
-                    <el-popover trigger="hover" placement="top">
-                    <p>Name: {{ scope.row.nombre }}</p>
                     <div slot="reference" class="name-wrapper">
                         <el-tag size="medium">{{ scope.row.nombre }}</el-tag>
                     </div>
-                    </el-popover>
                 </template>
             </el-table-column>
             <el-table-column
                 label="Apellido"
                 width="180">
                 <template slot-scope="scope">
-                    <el-popover trigger="hover" placement="top">
-                    <p>Name: {{ scope.row.apellido }}</p>
                     <div slot="reference" class="name-wrapper">
                         <el-tag size="medium">{{ scope.row.apellido }}</el-tag>
                     </div>
-                    </el-popover>
                 </template>
             </el-table-column>
             <el-table-column
                 label="Edad"
                 width="250">
                 <template slot-scope="scope">
-                    <el-popover trigger="hover" placement="top">
-                    <p>Name: {{ scope.row.anio }}</p>
                     <div slot="reference" class="name-wrapper">
                         <el-tag size="medium">{{ scope.row.anio }}</el-tag>
                     </div>
-                    </el-popover>
                 </template>
             </el-table-column>
             <el-table-column
-                label="Operaciones">
+                label="Acción">
                 <template slot-scope="scope">
                     <el-button
                     size="mini"
